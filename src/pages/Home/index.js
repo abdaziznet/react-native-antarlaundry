@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {ImageHeader, Logo} from '../../assets';
+import {Balance} from '../../components';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           <Text style={styles.username}>Abdul Aziz</Text>
         </View>
       </ImageBackground>
+      <Balance />
     </View>
   );
 };
