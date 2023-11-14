@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     color: Constant.ACTIVE_COLOR,
   },
   btnAction: {
+    flex: 1,
     flexDirection: 'row',
-    marginLeft: 12,
+    justifyContent: 'flex-end',
   },
 });
