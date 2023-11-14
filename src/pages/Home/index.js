@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {ImageHeader, Logo} from '../../assets';
-import {Balance} from '../../components';
+import {Balance, ButtonIcon} from '../../components';
 
 const Home = () => {
   return (
@@ -21,6 +21,17 @@ const Home = () => {
         </View>
       </ImageBackground>
       <Balance />
+      <View style={styles.service}>
+        <Text style={styles.subTitle}>Our Service</Text>
+        <View style={styles.iconService}>
+          <ButtonIcon title={'Kilos'} type={'service'} />
+          <ButtonIcon title={'Unit'} type={'service'} />
+          <ButtonIcon title={'VIP'} type={'service'} />
+          <ButtonIcon title={'Carpet'} type={'service'} />
+          <ButtonIcon title={'Only Iron'} type={'service'} />
+          <ButtonIcon title={'Express'} type={'service'} />
+        </View>
+      </View>
     </View>
   );
 };
@@ -56,5 +67,22 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontSize: 27,
     fontFamily: 'TitilliumWeb-Bold',
+  },
+  service: {
+    paddingHorizontal: 30,
+    paddingTop: 15,
+  },
+  subTitle: {
+    fontSize: 18,
+    fontFamily: 'TitilliumWeb-Bold',
+    color: '#000000',
+  },
+  iconService: {
+    // paddingTop: 20,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    marginTop: 10,
+    flexWrap: 'wrap',
+    borderRadius: 10,
   },
 });
