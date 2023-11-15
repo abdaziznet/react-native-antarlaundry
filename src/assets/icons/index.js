@@ -12,6 +12,7 @@ import IconCarpet from './carpet.svg';
 import IconExpress from './express.svg';
 import IconIron from './iron.svg';
 import IconVIP from './vip.svg';
+import IconActiveOrder from './activeorder.svg';
 
 export {
   IconHomeActive,
@@ -28,4 +29,5 @@ export {
   IconIron,
   IconUnit,
   IconVIP,
+  IconActiveOrder,
 };

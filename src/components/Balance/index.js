@@ -28,7 +28,6 @@ const Balance = () => {
 
 export default Balance;
 
-const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.18,
     shadowRadius: 4.59,
     elevation: 5,
-    marginTop: -windowHeight * 0.05,
+    marginTop: -windowHeight * 0.06,
     flexDirection: 'row',
   },
   text: {

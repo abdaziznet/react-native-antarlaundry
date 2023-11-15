@@ -36,12 +36,12 @@ const styles = StyleSheet.create({
   icon: type => ({
     backgroundColor: Constant.BG_COLOR_ICON,
     borderRadius: 5,
-    padding: type === 'service' ? 12 : 5,
+    padding: type === 'service' ? 9 : 5,
   }),
   text: type => ({
     fontSize: type === 'service' ? 12 : 8,
     fontFamily: 'TitilliumWeb-Bold',
     textAlign: 'center',
-    paddingBottom: type === 'service' ? 12 : 0,
+    paddingBottom: type === 'service' ? 9 : 0,
   }),
 });

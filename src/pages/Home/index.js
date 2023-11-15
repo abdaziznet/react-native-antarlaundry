@@ -5,33 +5,47 @@ import {
   Image,
   Text,
   View,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import {ImageHeader, Logo} from '../../assets';
-import {Balance, ButtonIcon} from '../../components';
+import {ActiveOrder, Balance, ButtonIcon} from '../../components';
+import * as Constant from '../../utils';
 
 const Home = () => {
   return (
     <View style={styles.page}>
-      <ImageBackground source={ImageHeader} style={styles.header}>
-        <Image source={Logo} style={styles.logo}></Image>
-        <View style={styles.title}>
-          <Text style={styles.welcome}>Welcome,</Text>
-          <Text style={styles.username}>Abdul Aziz</Text>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <ImageBackground source={ImageHeader} style={styles.header}>
+          <Image source={Logo} style={styles.logo}></Image>
+          <View style={styles.title}>
+            <Text style={styles.welcome}>Welcome,</Text>
+            <Text style={styles.username}>Abdul Aziz</Text>
+          </View>
+        </ImageBackground>
+        <Balance />
+        <View style={styles.service}>
+          <Text style={styles.subTitle}>Our Service</Text>
+          <View style={styles.iconService}>
+            <ButtonIcon title={'Kilos'} type={'service'} />
+            <ButtonIcon title={'Unit'} type={'service'} />
+            <ButtonIcon title={'VIP'} type={'service'} />
+            <ButtonIcon title={'Carpet'} type={'service'} />
+            <ButtonIcon title={'Only Iron'} type={'service'} />
+            <ButtonIcon title={'Express'} type={'service'} />
+          </View>
         </View>
-      </ImageBackground>
-      <Balance />
-      <View style={styles.service}>
-        <Text style={styles.subTitle}>Our Service</Text>
-        <View style={styles.iconService}>
-          <ButtonIcon title={'Kilos'} type={'service'} />
-          <ButtonIcon title={'Unit'} type={'service'} />
-          <ButtonIcon title={'VIP'} type={'service'} />
-          <ButtonIcon title={'Carpet'} type={'service'} />
-          <ButtonIcon title={'Only Iron'} type={'service'} />
-          <ButtonIcon title={'Express'} type={'service'} />
+        <View style={styles.activeOrder}>
+          <Text style={styles.subTitle}>Active Order</Text>
+          <ActiveOrder orderNo="Order No: 0012989" status="On Progress" />
+          <ActiveOrder orderNo="Order No: 0012988" status="Pending" />
+          <ActiveOrder orderNo="Order No: 0012987" status="On Progress" />
+          <ActiveOrder orderNo="Order No: 0012986" status="Completed" />
+          <ActiveOrder orderNo="Order No: 0012985" status="Pending" />
+          <ActiveOrder orderNo="Order No: 0012984" status="On Progress" />
+          <ActiveOrder orderNo="Order No: 0012983" status="Completed" />
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 };
@@ -44,6 +58,7 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
+    backgroundColor: 'white',
   },
   header: {
     width: windowWidth,
@@ -69,8 +84,8 @@ const styles = StyleSheet.create({
     fontFamily: 'TitilliumWeb-Bold',
   },
   service: {
-    paddingHorizontal: 30,
-    paddingTop: 15,
+    paddingHorizontal: 25,
+    paddingTop: 5,
   },
   subTitle: {
     fontSize: 18,
@@ -84,5 +99,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flexWrap: 'wrap',
     borderRadius: 10,
+  },
+  activeOrder: {
+    paddingTop: 5,
+    paddingHorizontal: 25,
+    backgroundColor: Constant.BG_COLOR_GREY,
+    flex: 1,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
 });

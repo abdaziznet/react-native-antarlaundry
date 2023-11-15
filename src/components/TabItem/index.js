@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
   text: isFocused => ({
     fontSize: 13,
     color: isFocused ? Constants.ACTIVE_COLOR : Constants.NON_ACTIVE_COLOR,
-    margin: 5,
+    margin: 3,
   }),
 });
