@@ -68,10 +68,10 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: windowWidth * 0.25,
-    height: windowHeight * 0.06,
+    height: windowHeight * 0.05,
   },
   title: {
-    marginTop: windowHeight * 0.04,
+    marginTop: windowHeight * 0.05,
   },
   welcome: {
     color: '#000000',
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     backgroundColor: Constant.BG_COLOR_GREY,
     flex: 1,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
   },
 });

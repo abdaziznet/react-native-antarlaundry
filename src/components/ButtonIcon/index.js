@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   icon: type => ({
     backgroundColor: Constant.BG_COLOR_ICON,
     borderRadius: 5,
-    padding: type === 'service' ? 9 : 5,
+    padding: type === 'service' ? 20 : 5,
   }),
   text: type => ({
     fontSize: type === 'service' ? 12 : 8,

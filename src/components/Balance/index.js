@@ -9,17 +9,17 @@ const Balance = () => {
     <View style={styles.container}>
       <View style={styles.balanceInfo}>
         <View style={styles.text}>
-          <Text style={styles.lblBalance}>Balance :</Text>
+          <Text style={styles.lblBalance}>Balance</Text>
           <Text style={styles.valBalance}>Rp. 100.000</Text>
         </View>
         <View style={styles.text}>
-          <Text style={styles.lblPoint}>Antar Point :</Text>
+          <Text style={styles.lblPoint}>Antar Point</Text>
           <Text style={styles.valPoint}>100 points</Text>
         </View>
       </View>
       <View style={styles.btnAction}>
         <ButtonIcon title="Add Balance" />
-        <Gap width={6} />
+        <Gap width={10} />
         <ButtonIcon title="Get Point" />
       </View>
     </View>
@@ -52,22 +52,22 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   balanceInfo: {
-    width: '60%',
+    width: '65%',
   },
   lblBalance: {
-    fontSize: 15,
+    fontSize: 18,
     fontFamily: 'TitilliumWeb-Reguler',
   },
   valBalance: {
-    fontSize: 15,
+    fontSize: 18,
     fontFamily: 'TitilliumWeb-Bold',
   },
   lblPoint: {
-    fontSize: 9,
+    fontSize: 10,
     fontFamily: 'TitilliumWeb-Reguler',
   },
   valPoint: {
-    fontSize: 9,
+    fontSize: 10,
     fontFamily: 'TitilliumWeb-Bold',
     color: Constant.ACTIVE_COLOR,
   },
